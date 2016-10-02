@@ -3,10 +3,7 @@
 
 [![Build Status](https://travis-ci.org/whatisinternet/inflector.svg?branch=master)](https://travis-ci.org/whatisinternet/inflector) [![Crates.io](https://img.shields.io/crates/v/inflector.svg)](https://crates.io/crates/inflector)
 
-Adds String based inflections for Rust. Snake, kebab, camel,
-sentence, class, title, upper, and lower cases as well as ordinalize,
-deordinalize, demodulize, deconstantize, foreign key, table case, and pluralize/singularize are supported as both traits and pure functions
-acting on String types.
+Adds String based inflections for Rust. Snake, kebab, camel, sentence, class, title, and pascal cases as well as ordinalize, deordinalize, demodulize, deconstantize, foreign key, table case, and pluralize/singularize are supported as both traits and pure functions acting on String types.
 
 -----
 ## Documentation:
@@ -23,7 +20,7 @@ Documentation can be found here at the README or via rust docs below.
 
 ```toml
 [dependencies]
-Inflector = "0.4.0"
+Inflector = "1.0.0"
 ```
 
 ### Compile yourself:
@@ -37,13 +34,13 @@ Inflector = "0.4.0"
 
 ```rust
 ...
-// to use methods like String.to_lower_case();
+// to use methods like String.to_camel_case();
 extern crate inflector;
 use inflector::Inflector;
 ...
 fn main() {
 ...
-  let camel_case_string: String = "some_string".to_string().to_camel_case();
+  let camel_case_string: String = "some_string".to_camel_case();
 ...
 }
 
@@ -53,7 +50,7 @@ Or
 
 ```rust
 ...
-// to use methods like to_lower_case(String);
+// to use methods like to_camel_case(String);
 extern crate inflector;
 
 // use inflector::cases::classcase::to_class_case;
@@ -82,15 +79,6 @@ extern crate inflector;
 
 // use inflector::cases::tablecase::to_table_case;
 // use inflector::cases::tablecase::is_table_case;
-
-// use inflector::cases::uppercase::to_upper_case;
-// use inflector::cases::uppercase::is_upper_case;
-
-// use inflector::cases::lowercase::to_lower_case;
-// use inflector::cases::lowercase::is_lower_case;
-
-// use inflector::cases::::to_lower_case;
-// use inflector::cases::lowercase::is_lower_case;
 
 // use inflector::numbers::ordinalize::ordinalize;
 // use inflector::numbers::deordinalize::deordinalize;
@@ -149,14 +137,6 @@ to_title_case(String) -> String
 
 ```rust
 to_table_case(String) -> String
-```
-
-```rust
-to_upper_case(String) -> String
-```
-
-```rust
-to_lower_case(String) -> String
 ```
 
 ```rust
@@ -224,14 +204,6 @@ is_table_case(String) -> bool
 ```
 
 ```rust
-is_upper_case(String) -> bool
-```
-
-```rust
-is_lower_case(String) -> bool
-```
-
-```rust
 is_foreign_key(String) -> bool
 ```
 
@@ -244,3 +216,18 @@ This project is intended to be a safe, welcoming space for collaboration, and co
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+## Contributing getting started guide
+
+- If you don't have rust installed install [rustup](https://www.rustup.rs/)
+- For development with benchmarks run nightly
+  - `rustup toolchain install nightly`
+  - `rustup default nightly`
+
+### Running the tests
+- `cargo test`
+
+### Running the benchmarks
+- `cargo bench --features=unstable`
+
+#### See contributing.md

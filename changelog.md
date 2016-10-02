@@ -1,3 +1,9 @@
+# 1.0.0
+
+## BREAKING CHANGES:
+
+- Removed `to_upper_case` and `to_lower_case`. This should not be alarming as these functions are supported in core rust for `String` types in the form of `to_uppercase` and `to_lowercase`.
+
 # 0.4.0
 
 ## Fixes:

@@ -5,11 +5,11 @@ authors = ["Josh Teeter<joshteeter@gmail.com>"]
 exclude = [".travis.yml", ".gitignore"]
 readme = "README.md"
 repository = "https://github.com/whatisinternet/inflector"
-documentation = "http://whatisinternet.github.io/inflector/doc/inflector/"
+documentation = "https://docs.rs/Inflector"
 homepage = "https://github.com/whatisinternet/inflector"
 license="BSD-2-Clause"
 description = """
-Adds String based inflections for Rust. Snake, kebab, camel, sentence, class, title, table, upper, and lower cases as well as ordinalize, deordinalize, demodulize, foreign key, and pluralize/singularize are supported as both traits and pure functions acting on String types.
+Adds String based inflections for Rust. Snake, kebab, camel, sentence, class, title, table, and pascal cases as well as ordinalize, deordinalize, demodulize, foreign key, and pluralize/singularize are supported as both traits and pure functions acting on String types.
 """
 keywords = ["string", "case", "camel", "snake", "inflection"]
 
